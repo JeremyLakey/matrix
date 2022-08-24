@@ -17,7 +17,7 @@ const addSymbol = () => {
     console.log("Adding symbol");
     let symbol = {
         type: getSymbolType(),
-        x: 0,
+        x: Math.floor(Math.random()*c.width),
         y: 0
     };
     symbols.push(symbol);
@@ -42,6 +42,7 @@ const clearScreen = () => {
 const step = () => {
     clearScreen();
     drawSymbols();
+    addSymbol();
 }
 
 
